@@ -37,7 +37,7 @@
     </div>
     <a
         class="blueShadow relative overflow-hidden px-6 py-2 group rounded-full bg-white text-slate-950"
-        href="linkedin.com"
+        href="www.linkedin.com/in/roberto-ramirez-aguilar"
         target="_blank"
     >
         <div
