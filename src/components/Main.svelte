@@ -1,4 +1,20 @@
 <script>
+    import Step from "./Step.svelte";
+
+    let steps = [
+        {
+            name: 'Smoljames Store',
+            icon: 'fa-solid fa-cart-shopping',
+        },
+        {
+            name: 'Ultimate Todos',
+            icon: 'fa-solid fa-list-check',
+        },
+        {
+            name: 'Pokedex',
+            icon: 'fa-solid fa-diagram-project',
+        },
+    ];
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -32,7 +48,40 @@
             </a>
         </div>
         <div class="relative shadow-2xl grid place-items-center">
-            <img src={"images/profile.png"} alt="Robert Ramirez profile">
+            <img src={"images/profile.png"} alt="Robert Ramirez profile" class="object-cover z-[2] max-h-[70vh]">
+        </div>
+    </section>
+    <section id="projects" class="py-20 lg:py-32 flex flex-col gap-24">
+        <div class="flex flex-col gap-2 text-center">
+            <h6 class="text-lg sm:text-xl md:text-2xl">
+                A few of my creative endeavors
+            </h6>
+            <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
+                Curious to <span class="poppins text-violet-400">see</span> my work?
+            </h3>
+        </div>
+        <a href="https://github.com/Robertron624?tab=repositories" target="_blank" class="mx-auto px-4 py-2 rounded-md border border-white border-solid flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-violet-700 duration-200">
+            <i class="fa-regular fa-circle-pay"></i>
+            <p>
+                Enter my <span class="text-blue-700 font-semibold">Github</span>
+            </p>
+        </a>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+            <Step step={steps[0]}>
+                <p>
+                    SmolJames Store is a full stack e-commerce application built with <strong class="text-violet-400">NextJs, TailwindCSS, and MongoDB</strong>. It features a fully functional shopping cart, user authentication, and a checkout process with Stripe.
+                </p>
+            </Step>
+            <Step step={steps[1]}>
+                <p>
+                    Ultimate Todos is a full stack application built with <strong class="text-violet-400">SvelteKit, TailwindCSS, and Firebase</strong>. It features user authentication, a fully functional todo list, and a dark mode toggle.
+                </p>
+            </Step>
+            <Step step={steps[2]}>
+                <p>
+                    Pokedex is a full stack application built with <strong class="text-violet-400">React, TailwindCSS, and PokeAPI</strong>. It features a fully functional pokedex with a search bar and a dark mode toggle.
+                </p>
+            </Step>
         </div>
     </section>
 </main>
